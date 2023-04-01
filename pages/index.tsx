@@ -117,9 +117,9 @@ const Home: NextPage = () => {
               className="mb-5 sm:mb-0"
             />
             <p className="text-left font-medium">
-              Copy your current bio{" "}
+              Tell us who you want to get with an April Fools Joke{" "}
               <span className="text-slate-500">
-                (or write a few sentences about yourself)
+                (or write a few sentences about the situation)
               </span>
               .
             </p>
@@ -130,7 +130,7 @@ const Home: NextPage = () => {
             rows={4}
             className="w-full rounded-md border-gray-300 shadow-sm focus:border-black focus:ring-black my-5"
             placeholder={
-              "e.g. Senior Developer Advocate @vercel. Tweeting about web development, AI, and React / Next.js. Writing nutlope.substack.com."
+              "e.g. I told my mom I was going to get her a new car"
             }
           />
           <div className="flex mb-5 items-center space-x-3">
@@ -146,7 +146,7 @@ const Home: NextPage = () => {
               className="bg-black rounded-xl text-white font-medium px-4 py-2 sm:mt-10 mt-8 hover:bg-black/80 w-full"
               onClick={(e) => generateBio(e)}
             >
-              Generate your bio &rarr;
+              Generate April Fools Joke &rarr;
             </button>
           )}
           {loading && (
