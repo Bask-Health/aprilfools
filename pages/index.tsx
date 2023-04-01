@@ -23,12 +23,27 @@ const Home: NextPage = () => {
     }
   };
 
-  const prompt = `Generate 2 ${vibe} twitter biographies with no hashtags and clearly labeled "1." and "2.". ${
+  const prompt = `Generate 2 ${vibe} april fools jokes clearly labeled "1." and "2.". ${
     vibe === "Funny"
-      ? "Make sure there is a joke in there and it's a little ridiculous."
+      ? "Make sure there is a inappropriate and dark joke in there and it's a little ridiculous."
+      : null
+  } :
+  ${
+    vibe === "Professional"
+      ? "Make sure there is a joke in there that is safe for work but will make everyone laugh."
+      : null
+  } :
+  ${
+    vibe === "Casual"
+      ? "Make sure there is a Casual but hilarious joke in there with a big punch line."
+      : null
+  } :
+  ${
+    vibe === "Long"
+      ? "Make sure there is a Casual but hilarious joke in there with a long setup but a big punch line."
       : null
   }
-      Make sure each generated biography is less than 160 characters, has short sentences that are found in Twitter bios, and base them on this context: ${bio}${
+      Make sure each generated april fools joke can be presented to the person in this context and is based on this context: ${bio}${
     bio.slice(-1) === "." ? "" : "."
   }`;
 
@@ -73,7 +88,7 @@ const Home: NextPage = () => {
   return (
     <div className="flex max-w-5xl mx-auto flex-col items-center justify-center py-2 min-h-screen">
       <Head>
-        <title>Twitter Bio Generator</title>
+        <title>April Fools GPT</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -89,7 +104,7 @@ const Home: NextPage = () => {
           <p>Star on GitHub</p>
         </a>
         <h1 className="sm:text-6xl text-4xl max-w-[708px] font-bold text-slate-900">
-          Generate your next Twitter bio using chatGPT
+          Generate your April Fools Day Joke using chatGPT
         </h1>
         <p className="text-slate-500 mt-5">47,118 bios generated so far.</p>
         <div className="max-w-xl w-full">
